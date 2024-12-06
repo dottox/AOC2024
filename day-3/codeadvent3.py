@@ -22,7 +22,6 @@ def first(memory):
     memory = memory[limits[1]:] # Borrar desde el inicio hasta la expresión, para no encontrar la misma nuevamente.
 
     sumOfMuls += eval(match.string[limits[0]:limits[1]]) # Evaluar la expresión y sumar al total
-    match = None  # Limpiar la variable match
 
   return sumOfMuls  # Retornar el total de multiplicaciones
 
@@ -51,8 +50,6 @@ def second(memory):
       enabled = True
     else:
       sumOfMuls += eval(match) if enabled else 0
-
-    match = None
   
   return sumOfMuls
 
